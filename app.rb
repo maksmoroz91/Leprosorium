@@ -57,3 +57,11 @@ post '/new' do
 
 	redirect to '/'
 end
+
+# вывод информации о посте
+
+get '/posts/:post_id' do
+	post_id = params[:post_id]
+
+	erb "Информация поста с ай-ди #{post_id}"
+end	
