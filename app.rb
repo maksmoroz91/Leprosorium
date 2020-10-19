@@ -12,6 +12,7 @@ end
 
 # вызывается каждый раз при перезагрузке любой страницы (не исполняется для CONFIGURE DO)
 before do
+	# инициализация БД
 	init_db 
 end
 
@@ -30,7 +31,7 @@ configure do
 end	
 
 get '/' do
-	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"			
+	erb :index
 end
 
 #обработчик get-запроса /new (браузер получает страницу на сервер)
